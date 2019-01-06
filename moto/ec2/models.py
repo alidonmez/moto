@@ -2362,6 +2362,10 @@ class Subnet(TaggedEC2Resource):
     def available_ip_addresses(self):
         return self._available_ip_addresses
 
+    @available_ip_addresses.setter
+    def available_ip_addresses(self, value):
+        self._available_ip_addresses = value
+
     @property
     def physical_resource_id(self):
         return self.id
