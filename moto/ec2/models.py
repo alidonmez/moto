@@ -2359,6 +2359,10 @@ class Subnet(TaggedEC2Resource):
         return self._availability_zone
 
     @property
+    def available_ip_addresses(self):
+        return self.available_ip_addresses
+
+    @property
     def physical_resource_id(self):
         return self.id
 
